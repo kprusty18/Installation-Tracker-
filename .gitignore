@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+
+# Local database and SQLite files (may contain project data and SMTP credentials)
+/data/*.db
+/data/*.db-*
+/data/*.sqlite
+/data/*.sqlite-*
+
+# Generated reports and email outbox
+/reports/*
+!/reports/.gitkeep
+
+# Local environment and editor/OS files
+.env
+.venv/
+venv/
+.vscode/
+.DS_Store
+Thumbs.db

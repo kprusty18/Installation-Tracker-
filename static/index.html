@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Installation Tracker</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f5fbf'/%3E%3Cpath d='M9 17l5 5 9-11' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <div class="logo">
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M6 12.5l4 4 8-9"/></svg></div>
+      <div><div class="logo-name" id="brand">Installation Tracker</div><div class="logo-sub">Project &amp; service desk</div></div>
+    </div>
+    <div class="nav-group">Overview</div>
+    <a href="#/dashboard" data-nav="dashboard" data-icon="dashboard">Dashboard</a>
+    <div class="nav-group">Operations</div>
+    <a href="#/projects" data-nav="projects" data-icon="projects">Projects &amp; Allotment</a>
+    <a href="#/readiness" data-nav="readiness" data-icon="readiness">Kickoff, Site &amp; Goods <span class="nav-badge" id="badgeReadiness"></span></a>
+    <a href="#/updates" data-nav="updates" data-icon="updates">Daily Updates <span class="nav-badge" id="badgeUpdates"></span></a>
+    <a href="#/inspection" data-nav="inspection" data-icon="inspection">Inspection &amp; Handover <span class="nav-badge" id="badgeInspection"></span></a>
+    <div class="nav-group">After-sales</div>
+    <a href="#/services" data-nav="services" data-icon="services">Free Service <span class="nav-badge" id="badgeServices"></span></a>
+    <a href="#/feedback" data-nav="feedback" data-icon="feedback">Customer Satisfaction</a>
+    <div class="nav-group">Admin</div>
+    <a href="#/reports" data-nav="reports" data-icon="reports">Email &amp; Reports</a>
+    <a href="#/team" data-nav="team" data-icon="team">Team Members</a>
+    <a href="#/settings" data-nav="settings" data-icon="settings">Settings</a>
+    <div class="side-foot">Running locally &middot; data stays on this PC</div>
+  </aside>
+  <div class="main-col">
+    <header class="topbar">
+      <button class="menu-btn" onclick="document.getElementById('side').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <div class="tb-title"><div class="crumb" id="crumb">Overview</div><h1 id="pageTitle">Dashboard</h1></div>
+      <div class="tb-right">
+        <div class="live" id="live" title="Dashboard refreshes automatically when anyone saves a change"><span class="dot"></span><span id="liveText">Connecting...</span></div>
+        <div class="clock" id="clock"></div>
+        <button class="primary" onclick="openProjectForm()">+ Allot project</button>
+      </div>
+    </header>
+    <main id="view"></main>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<div class="drawer" id="drawer"></div>
+<div class="modal" id="modal"></div>
+<div class="tooltip" id="tooltip"></div>
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
